@@ -1,31 +1,44 @@
 class Aritmetica:
-    # Python solamente toma en cuenta el último constructor
-    def __init__(self, operando1):
-        self.operando1 = operando1
-    
+  
     def __init__(self, operando1 = None, operando2 = None):
-        self.operando1 = operando1
-        self.operando2 = operando2
+        self._operando1 = operando1
+        self._operando2 = operando2
+    
+    @property
+    def operador1(self):
+        return self._operando1
+    
+    @operador1.setter
+    def operador1(self, operador1):
+        self._operando1 = operador1
+        
+    @property
+    def operador2(self):
+        return self._operando2
+    
+    @operador2.setter
+    def operador2(self, operador2):
+        self._operando2 = operador2
     
     def sumar(self):
-        return f"Suma: { self.operando1 + self.operando2 }"
+        return f"Suma: { self._operando1 + self._operando2 }"
     
     def restar(self):
-        return f"Resta: {self.operando1 - self.operando2}"
+        return f"Resta: {self._operando1 - self._operando2}"
 
     def dividir(self):
-        return f"Division: {self.operando1 / self.operando2}"
+        return f"Division: {self._operando1 / self._operando2}"
     
     def multuplicar(self):
-        return f"Multiplicación: {self.operando1 * self.operando2}"
+        return f"Multiplicación: {self._operando1 * self._operando2}"
 
-aritmetica = Aritmetica(5, 2)
+aritmetica = Aritmetica();
+aritmetica.operador1 = 2
+aritmetica.operador2 = 2
 
-print(aritmetica.sumar())
-print(aritmetica.restar())
-print(aritmetica.dividir())
-print(aritmetica.multuplicar())
-
-artimetica2 = Aritmetica(4);
-artimetica2.operando2 = 2;
-artimetica2.sumar()
+print ( f''' 
+{aritmetica.sumar()}
+{aritmetica.restar()}
+{aritmetica.multuplicar()}
+{aritmetica.dividir()}
+       ''')
