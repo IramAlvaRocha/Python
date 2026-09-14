@@ -1,3 +1,5 @@
+from functools import reduce
+
 print('*** Funciones lambda ***')
 
 # Funcion para regresar un número elevado al cuadradon, sin usar lambda
@@ -30,3 +32,8 @@ print(cuadrados)
 pares = list(filter(lambda x: x % 2 == 0, numeros))
 
 print(pares)
+
+# Reduce y Map
+
+suma_iterativa = reduce(lambda x, y: x + y, numeros)
+print(suma_iterativa)
