@@ -17,3 +17,10 @@ class Empresa:
                 contador_empleados_por_departamento += 1
                 
         return contador_empleados_por_departamento
+    
+    def obtener_total_empleados(self):
+        print(f"Total de empleados para la empres: {self.nombre}")
+        for empleado in self.empleados:
+            print(f"Empleado {empleado.id} - {empleado.nombre} - {empleado.departamento}")
+    
+    

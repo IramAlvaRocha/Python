@@ -20,3 +20,12 @@ empresa1.contratar_empleado("Diego", "Desarrollo")
 # Obtener el total de objetos empleados
 
 print(f"Total de empleados: {Empleado.obtener_total_empleador()}")
+
+
+# Obtener el numero de empleados por departamento
+print("Empleados en el departamento de ventas:"
+      f"{empresa1.obtener_numero_empleados_por_departamento("Ventas")}")
+
+# Mostrar todos los empleados de la empresa
+
+print(f'La empresa tiene: {empresa1.obtener_total_empleados()}')
