@@ -20,4 +20,4 @@ for numero in numeros:
 
 numeros_pares = [ numero for numero in numeros if numero % 2 == 0 ]
 
-print(f'Números pares (compresioín): {numeros_pares}')
+print(f'Números pares (compresión): {numeros_pares}')
