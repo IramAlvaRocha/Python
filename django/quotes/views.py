@@ -20,3 +20,19 @@ def days_week(request, day):
     else:
         return HttpResponseNotFound("Día no válido")  
     return HttpResponse(quote_text)
+
+def days_week_with_number(request, day):
+    quote_text = None
+    if day == 1: 
+        quote_text = 'Pienso... luego existo.'
+    elif day == 2:
+        quote_text = "La vida es una lenteja"
+    elif day == 3:
+        quote_text = "Quiero ser minero"
+    elif day == 4:
+        quote_text = "Hay una vida en el más allá"
+    elif day == 5:
+        quote_text = "Estar roto tambien es ser libre"
+    else:
+        return HttpResponseNotFound("Día no válido")  
+    return HttpResponse(quote_text)
